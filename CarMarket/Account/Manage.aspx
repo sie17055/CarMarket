@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Manage Account" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Manage.aspx.cs" Inherits="CarMarket.Account.Manage" %>
+﻿<%@ Page Title="Account bearbeiten" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Manage.aspx.cs" Inherits="CarMarket.Account.Manage" %>
 
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
@@ -14,13 +14,13 @@
     <div class="row">
         <div class="col-md-12">
             <div class="form-horizontal">
-                <h4>Change your account settings</h4>
+                <h4>Ändere deine Account-Einstellungen</h4>
                 <hr />
                 <dl class="dl-horizontal">
                     <dt>Password:</dt>
                     <dd>
-                        <asp:HyperLink NavigateUrl="/Account/ManagePassword" Text="[Change]" Visible="false" ID="ChangePassword" runat="server" />
-                        <asp:HyperLink NavigateUrl="/Account/ManagePassword" Text="[Create]" Visible="false" ID="CreatePassword" runat="server" />
+                        <asp:HyperLink NavigateUrl="/Account/ManagePassword" Text="[Ändern]" Visible="false" ID="ChangePassword" runat="server" />
+                        <asp:HyperLink NavigateUrl="/Account/ManagePassword" Text="[Hinzufügen]" Visible="false" ID="CreatePassword" runat="server" />
                     </dd>
                     <dt>External Logins:</dt>
                     <dd><%: LoginsCount %>

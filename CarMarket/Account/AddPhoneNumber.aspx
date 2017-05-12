@@ -1,21 +1,21 @@
-﻿<%@ Page Title="Phone Number" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddPhoneNumber.aspx.cs" Inherits="CarMarket.Account.AddPhoneNumber" %>
+﻿<%@ Page Title="Telefonnummer" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddPhoneNumber.aspx.cs" Inherits="CarMarket.Account.AddPhoneNumber" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
 
     <div class="form-horizontal">
-        <h4>Add a phone number</h4>
+        <h4>Füge eine Telefonnummer hinzu</h4>
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
         <p class="text-danger">
             <asp:Literal runat="server" ID="ErrorMessage" />
         </p>
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="PhoneNumber" CssClass="col-md-2 control-label">Phone Number</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="PhoneNumber" CssClass="col-md-2 control-label">Telefonnummer</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="PhoneNumber" CssClass="form-control" TextMode="Phone" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="PhoneNumber"
-                    CssClass="text-danger" ErrorMessage="The PhoneNumber field is required." />
+                    CssClass="text-danger" ErrorMessage="Das Telefonnummer-Feld ist ein Pflichtfeld." />
             </div>
         </div>
         <div class="form-group">
