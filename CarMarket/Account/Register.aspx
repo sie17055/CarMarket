@@ -1,13 +1,13 @@
-﻿<%@ Page Title="Registrieren" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="CarMarket.Account.Register" %>
+﻿<%@ Page Title="Registrieren Sie sich noch heute!" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="CarMarket.Account.Register" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h2><%: Title %>.</h2>
+    <h2><%: Title %></h2>
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
     </p>
 
     <div class="form-horizontal">
-        <h4>Registrieren Sie sich noch heute!</h4>
+        <h4></h4>
         <hr />
         <!--<asp:ValidationSummary runat="server" CssClass="text-danger" />-->
         <div class="form-group">

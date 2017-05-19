@@ -24,6 +24,35 @@ body:after {
     padding-right: 15px;
 }
 
+.tabs{
+    position: relative;
+    top: 0px;
+    left: 10px;
+}
+
+.tab{    
+    background-color: #f8a81d;
+    border: 1px solid black;
+    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 150px;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.selectedTab{
+    background-color: #ffffff;
+    border-bottom: 1px solid white;
+}
+
+.tabContents{
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */

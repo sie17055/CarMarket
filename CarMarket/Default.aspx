@@ -4,20 +4,22 @@
 <asp:Content  ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-            <asp:Button id="Button1" runat="server" Text="Suchen" OnClick="Button1_Click" CssClass="btn btn-default"  /> &nbsp;
-            <asp:Button id="Button2" runat="server" Text="Inserieren" OnClick="Button2_Click" CssClass="btn btn-default"  /> &nbsp;<br /><br />
-            <asp:MultiView id="MultiView1" runat="server" ActiveViewIndex=0>
-            <asp:View id="View1" runat="server">
-                <a>Suchen</a>
-                <br />
-                <br />
-            </asp:View>
-            <asp:View id="View2" runat="server">
-                <a>Inserieren</a>
-                <br />
-                <br />
-            </asp:View>
-        </asp:MultiView>
+        <div>
+            <asp:Menu ID="mnuTabs" runat="server" Orientation="Horizontal" OnMenuItemClick="mnuTabs_MenuItemClick" CssClass="tabs">
+                <Items>
+                    <asp:MenuItem Text="Suchen" Value="0" Selected="True"></asp:MenuItem>
+                    <asp:MenuItem Text="Inserieren" Value="1"></asp:MenuItem>
+                </Items>
+                <StaticMenuItemStyle CssClass="tab" />
+                <StaticSelectedStyle CssClass="selectedTab" />
+            </asp:Menu>
+        </div>
+        <div class="tabContents">
+            <asp:MultiView ID="multiTabs" runat="server" ActiveViewIndex="0">
+                <asp:View ID="View1" runat="server">View #1</asp:View>
+                <asp:View ID="View2" runat="server">View #2</asp:View>
+            </asp:MultiView>
+        </div>
     </div>
 
     <div class="row">

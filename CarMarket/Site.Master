@@ -77,7 +77,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Tobias Kerbl & Alexander Siess</p>
+                <p>&copy; CarMarket - <%: DateTime.Now.Year %></p>
             </footer>
         </div>
     </form>
