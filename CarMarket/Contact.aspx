@@ -12,7 +12,11 @@
     </address>
 
     <address>
-        <strong>Support:</strong>   <a href="mailto:support@carmarket.at">support@carmarket.at</a><br />
-        <strong>CEOs:</strong> <a href="mailto:office@carmarket.at">office@carmarket.at</a>
+        <strong>Support:</strong>   <a href="mailto:support@carmarket.at">support@carmarket.com</a><br />
+        <strong>CEOs:</strong> <a href="mailto:office@carmarket.at">office@carmarket.com</a>
     </address>
+
+    <p>
+        Angebote aus Österreich, Deutschland & der Schweiz
+    </p>
 </asp:Content>

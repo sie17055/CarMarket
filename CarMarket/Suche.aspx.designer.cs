@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CarMarket.Account {
+namespace CarMarket {
     
     
-    public partial class Register {
+    public partial class Suche {
         
         /// <summary>
         /// ErrorMessage control.

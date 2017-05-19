@@ -1,40 +1,52 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CarMarket._Default" %>
+﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CarMarket._Default" %>
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
+<asp:Content  ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+            <asp:Button id="Button1" runat="server" Text="Suchen" OnClick="Button1_Click" CssClass="btn btn-default"  /> &nbsp;
+            <asp:Button id="Button2" runat="server" Text="Inserieren" OnClick="Button2_Click" CssClass="btn btn-default"  /> &nbsp;<br /><br />
+            <asp:MultiView id="MultiView1" runat="server" ActiveViewIndex=0>
+            <asp:View id="View1" runat="server">
+                <a>Suchen</a>
+                <br />
+                <br />
+            </asp:View>
+            <asp:View id="View2" runat="server">
+                <a>Inserieren</a>
+                <br />
+                <br />
+            </asp:View>
+        </asp:MultiView>
     </div>
 
     <div class="row">
         <div class="col-md-4">
-            <h2>Getting started</h2>
+            <h2>Autos suchen</h2>
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+                Suchen Sie jetzt ein Auto Ihrer Wahl! Wir sind sicher, Ihr Wunschauto ist verfügbar!
             </p>
             <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
+                <a class="btn btn-default" href="/Suche.aspx">Jetzt loslegen &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Web Hosting</h2>
+            <h2>Autos inserieren</h2>
             <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
+                Möchten Sie ein Auto für etwas Geld loswerden? Sie suchen eine einfache Möglichkeit, Ihr Auto zu inserieren? Stellen Sie hier Ihr Angebot! 
+                Viele interessierte Besucher werden Ihr Inserat sehen! 
             </p>
             <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
+                <a class="btn btn-default" href="https://www.ferrari.com/de-AT">Jetzt loslegen &raquo;</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>Händlersuche</h2>
+            <p>
+                Sind Sie Händler und wollen Ihre Autos auf www.carmarket.com verkaufen?
+            </p>
+            <p>
+                <a class="btn btn-default" href="https://www.denzel.at/">Jetzt loslegen &raquo;</a>
             </p>
         </div>
     </div>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Registrieren" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="CarMarket.Account.Register" %>
+﻿<%@ Page Title="Autos suchen" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Suche.aspx.cs" Inherits="CarMarket.Suche" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <h2><%: Title %>.</h2>
@@ -7,7 +7,7 @@
     </p>
 
     <div class="form-horizontal">
-        <h4>Registrieren Sie sich noch heute!</h4>
+        <h4>Detailsuche</h4>
         <hr />
         <!--<asp:ValidationSummary runat="server" CssClass="text-danger" />-->
         <div class="form-group">
