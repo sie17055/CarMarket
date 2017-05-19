@@ -5,6 +5,28 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarMarket", "CarMarket\CarMarket.csproj", "{5E2FF728-8EB4-4962-B949-5B34D3A2FEC0}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CarMarkt_Rep", "..\CarMarkt_Rep\", "{5D8C8619-1587-47A1-98A8-F70DC4EED2EC}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_8121"
+		Debug.AspNetCompiler.PhysicalPath = "..\CarMarkt_Rep\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_8121\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_8121"
+		Release.AspNetCompiler.PhysicalPath = "..\CarMarkt_Rep\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_8121\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "8121"
+		SlnRelativePath = "..\CarMarkt_Rep\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +37,10 @@ Global
 		{5E2FF728-8EB4-4962-B949-5B34D3A2FEC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E2FF728-8EB4-4962-B949-5B34D3A2FEC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E2FF728-8EB4-4962-B949-5B34D3A2FEC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D8C8619-1587-47A1-98A8-F70DC4EED2EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D8C8619-1587-47A1-98A8-F70DC4EED2EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D8C8619-1587-47A1-98A8-F70DC4EED2EC}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D8C8619-1587-47A1-98A8-F70DC4EED2EC}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
