@@ -74,6 +74,7 @@ namespace CarMarket
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
+            Session["User"] = null;
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
     }

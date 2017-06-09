@@ -7,8 +7,8 @@
         <div>
             <asp:Menu ID="mnuTabs" runat="server" Orientation="Horizontal" OnMenuItemClick="mnuTabs_MenuItemClick" CssClass="tabs">
                 <Items>
-                    <asp:MenuItem Text="Suchen" Value="0" Selected="True"></asp:MenuItem>
-                    <asp:MenuItem Text="Inserieren" Value="1"></asp:MenuItem>
+                    <asp:MenuItem Text="Aktionen" Value="0" Selected="True"></asp:MenuItem>
+                    <asp:MenuItem Text="Neues" Value="1"></asp:MenuItem>
                 </Items>
                 <StaticMenuItemStyle CssClass="tab" />
                 <StaticSelectedStyle CssClass="selectedTab" />
@@ -16,39 +16,38 @@
         </div>
         <div class="tabContents">
             <asp:MultiView ID="multiTabs" runat="server" ActiveViewIndex="0">
-                <asp:View ID="View1" runat="server">View #1</asp:View>
-                <asp:View ID="View2" runat="server">View #2</asp:View>
+                <asp:View ID="View1" runat="server"><img class="imgaktion" src="Images/regera1.jpg"/></asp:View>
+                <asp:View ID="View2" runat="server">Bald erhältlich: <a href="http://www.toyota-global.com/showroom/toyota_design/concept_cars/gallery_ft-1.html">Toyota FT-1</a></asp:View>
             </asp:MultiView>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-4">
-            <h2>Autos suchen</h2>
+            <h2>Modelle ansehen</h2>
             <p>
-                Suchen Sie jetzt ein Auto Ihrer Wahl! Wir sind sicher, Ihr Wunschauto ist verfügbar!
+                Suchen Sie jetzt ein Mietauto Ihrer Wahl! Wir sind sicher, Ihr Wunschauto ist verfügbar!
             </p>
             <p>
-                <a class="btn btn-default" href="/Suche.aspx">Jetzt loslegen &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Autos inserieren</h2>
-            <p>
-                Möchten Sie ein Auto für etwas Geld loswerden? Sie suchen eine einfache Möglichkeit, Ihr Auto zu inserieren? Stellen Sie hier Ihr Angebot! 
-                Viele interessierte Besucher werden Ihr Inserat sehen! 
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://www.ferrari.com/de-AT">Jetzt loslegen &raquo;</a>
+                <a class="btn btn-default" href="/Supercars.aspx">Jetzt loslegen &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Händlersuche</h2>
+            <h2>Supercar mieten</h2>
             <p>
-                Sind Sie Händler und wollen Ihre Autos auf www.carmarket.com verkaufen?
+                Haben Sie sich für eines unserer tollen Supercars entschieden? Mieten Sie es! Ab € 499,- / Tag!
             </p>
             <p>
-                <a class="btn btn-default" href="https://www.denzel.at/">Jetzt loslegen &raquo;</a>
+                <a class="btn btn-default" href="/Mieten.aspx">Jetzt loslegen &raquo;</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>Kundenmeinungen</h2>
+            <p>
+                Wollen Sie etwas über die Erfahrungen anderer Kunden wissen? Lesen Sie jetzt Kundenrezensionen!
+            </p>
+            <p>
+                <a class="btn btn-default" href="/Bewertungen.aspx">Jetzt loslegen &raquo;</a>
             </p>
         </div>
     </div>

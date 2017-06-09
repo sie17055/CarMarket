@@ -4951,6 +4951,11 @@ a.list-group-item.active > .badge,
   color: #000000;
 }
 
+.imgaktion{
+    height: 250px;
+    width: 1001px;
+}
+
 .container .jumbotron {
   border-radius: 6px;
 }

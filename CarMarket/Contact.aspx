@@ -12,11 +12,11 @@
     </address>
 
     <address>
-        <strong>Support:</strong>   <a href="mailto:support@carmarket.at">support@carmarket.com</a><br />
-        <strong>CEOs:</strong> <a href="mailto:office@carmarket.at">office@carmarket.com</a>
+        <strong>Support:</strong>   <a href="mailto:support@supercarrent.at">support@supercarrent.com</a><br />
+        <strong>CEO:</strong> <a href="mailto:office@supercarrent.at">office@supercarrent.com</a>
     </address>
 
     <p>
-        Angebote aus Österreich, Deutschland & der Schweiz
+        Exoten und Klassiker aus aller Welt
     </p>
 </asp:Content>

@@ -183,10 +183,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bewertungen.aspx" />
     <Content Include="Images\hintergrund1.jpg" />
     <Content Include="Images\hintergrund1_2.jpg" />
     <Content Include="Images\logo.png" />
-    <Content Include="Merkliste.aspx" />
+    <Content Include="Images\logo_new.png" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
     <Content Include="Account\Forgot.aspx" />
@@ -215,6 +216,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Images\regera1.jpg" />
+    <Content Include="Mieten.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -248,7 +251,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
-    <Content Include="Suche.aspx" />
+    <Content Include="Supercars.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -370,16 +373,16 @@
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Merkliste.aspx.cs">
-      <DependentUpon>Merkliste.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Merkliste.aspx.designer.cs">
-      <DependentUpon>Merkliste.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Bewertungen.aspx.cs">
+      <DependentUpon>Bewertungen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bewertungen.aspx.designer.cs">
+      <DependentUpon>Bewertungen.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -396,6 +399,14 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LoginDaten.cs" />
+    <Compile Include="Mieten.aspx.cs">
+      <DependentUpon>Mieten.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mieten.aspx.designer.cs">
+      <DependentUpon>Mieten.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -414,12 +425,12 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="Suche.aspx.cs">
-      <DependentUpon>Suche.aspx</DependentUpon>
+    <Compile Include="Supercars.aspx.cs">
+      <DependentUpon>Supercars.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Suche.aspx.designer.cs">
-      <DependentUpon>Suche.aspx</DependentUpon>
+    <Compile Include="Supercars.aspx.designer.cs">
+      <DependentUpon>Supercars.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

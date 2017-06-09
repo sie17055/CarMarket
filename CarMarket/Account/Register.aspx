@@ -22,13 +22,6 @@
             </div>
         </div>
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="TitelVorne" CssClass="col-md-2 control-label">Titel</asp:Label>
-            <div class="col-md-10">
-                <asp:TextBox runat="server" ID="TitelVorne" CssClass="form-control" TextMode="SingleLine"/>
-                
-            </div>
-        </div>
-        <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Vorname" CssClass="col-md-2 control-label">Vorname*</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="Vorname" CssClass="form-control" TextMode="SingleLine" />
@@ -42,20 +35,6 @@
                 <asp:TextBox runat="server" ID="Nachname" CssClass="form-control" TextMode="SingleLine" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Nachname"
                     CssClass="text-danger" ErrorMessage="Das Nachname-Feld ist ein Pflichtfeld!" />
-            </div>
-        </div>
-        <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="Zweitname" CssClass="col-md-2 control-label">Zweitname</asp:Label>
-            <div class="col-md-10">
-                <asp:TextBox runat="server" ID="Zweitname" CssClass="form-control" TextMode="SingleLine" />
-                
-            </div>
-        </div>
-        <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="TitelNach" CssClass="col-md-2 control-label">2. Titel</asp:Label>
-            <div class="col-md-10">
-                <asp:TextBox runat="server" ID="TitelNach" CssClass="form-control" TextMode="SingleLine" />
-
             </div>
         </div>
         <div class="form-group">

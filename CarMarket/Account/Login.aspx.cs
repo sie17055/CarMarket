@@ -15,12 +15,6 @@ namespace CarMarket.Account
             RegisterHyperLink.NavigateUrl = "Register";
             // Enable this once you have account confirmation enabled for password reset functionality
             //ForgotPasswordHyperLink.NavigateUrl = "Forgot";
-            OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
-            var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
-            if (!String.IsNullOrEmpty(returnUrl))
-            {
-                RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
-            }
         }
 
         protected void LogIn(object sender, EventArgs e)
@@ -38,7 +32,10 @@ namespace CarMarket.Account
                 switch (result)
                 {
                     case SignInStatus.Success:
-                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                        LoginDaten l = new LoginDaten(Email.Text, Password.Text);
+                        Session["User"] = l;
+                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);                            
+                            //Response.Redirect("~/Mieten.aspx");                        
                         break;
                     case SignInStatus.LockedOut:
                         Response.Redirect("/Account/Lockout");
