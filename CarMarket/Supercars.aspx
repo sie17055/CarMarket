@@ -3,7 +3,7 @@
     <h2><%: Title %></h2>
     <div style="display: inline-block">
         <div style="width:850px; float: left">
-            <asp:GridView ID="datagrid" runat="server" AutoGenerateColumns="False" DataKeyNames="mo_id" DataSourceID="SqlDataSource1" AllowPaging="True" BackColor="White" PageSize="7" Font-Names="Microsoft YaHei" RowStyle-HorizontalAlign="Center" RowStyle-VerticalAlign="Middle" BorderStyle="Solid">
+            <asp:GridView ID="datagrid" runat="server" AutoGenerateColumns="False" DataKeyNames="mo_id" DataSourceID="SqlDataSource1" AllowPaging="True" BackColor="White" PageSize="7" Font-Names="Microsoft YaHei" RowStyle-HorizontalAlign="Center" RowStyle-VerticalAlign="Middle" BorderStyle="Solid" OnSelectedIndexChanged="datagrid_SelectedIndexChanged">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
                     <asp:ImageField DataImageUrlField="mo_picture" HeaderText="Bild" SortExpression="mo_picture" ControlStyle-Height="90" ControlStyle-Width="160">
@@ -19,8 +19,10 @@
             </asp:GridView>
         </div>
         <div style="width:250px; float: left">
-            <asp:DetailsView ID="DetailsView1" DataKeyNames="mo_id" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataSourceID="SqlDataSource1" HorizontalAlign="Left" BackColor="White" Font-Names="Microsoft YaHei">
+            <asp:DetailsView ID="DetailsView1" DataKeyNames="mo_id" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataSourceID="SqlDataSource1" HorizontalAlign="Left" BackColor="White" Font-Names="Microsoft YaHei" AllowPaging="True">
                 <Fields>
+                    <asp:BoundField DataField="mo_m_id" HeaderText="Marke" />
+                    <asp:BoundField DataField="mo_bezeichnung" HeaderText="Modell" />
                     <asp:BoundField DataField="mo_ps" HeaderText="Leistung (PS)" />
                     <asp:BoundField DataField="mo_gewicht" HeaderText="Leergewicht (kg)" />
                     <asp:BoundField DataField="mo_getriebe" HeaderText="Getriebe" />
