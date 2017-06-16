@@ -20,7 +20,9 @@ namespace CarMarket
 
         public void datagrid_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DetailsView1.SetPageIndex(datagrid.SelectedIndex * (datagrid.PageIndex + 1));
+            int x = datagrid.SelectedIndex + (datagrid.PageIndex * 7);
+            DetailsView1.SetPageIndex(datagrid.SelectedIndex + (datagrid.PageIndex*7));
+            
         }
     }
 } 
