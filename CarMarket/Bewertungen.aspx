@@ -5,13 +5,13 @@
         <div style="float: left">
             <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Left" DataSourceID="SqlDataSource1" AutoGenerateColumns="False">
                 <Columns>
-                    <asp:BoundField DataField="b_mo_id" HeaderText="Modell" />
+                    <asp:BoundField DataField="mo_bezeichnung" HeaderText="Modell" />
                     <asp:BoundField DataField="b_user" HeaderText="User" />
                     <asp:BoundField DataField="b_text" HeaderText="Bewertung" />
                     <asp:BoundField DataField="b_punkte" HeaderText="Punkte" />
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:supercarrentConnectionString %>" ProviderName="<%$ ConnectionStrings:supercarrentConnectionString.ProviderName %>" SelectCommand="SELECT * FROM b_bewertungen" DeleteCommand="DELETE FROM b_bewertungen WHERE b_id = ?" InsertCommand="INSERT INTO b_bewertungen (b_id, b_mo_id, b_user, b_text, b_punkte) VALUES (?, ?, ?, ?, ?)" UpdateCommand="UPDATE b_bewertungen SET b_mo_id = ?, b_user = ?, b_text = ?, b_punkte = ? WHERE b_id = ?">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:supercarrentConnectionString %>" ProviderName="<%$ ConnectionStrings:supercarrentConnectionString.ProviderName %>" SelectCommand="SELECT * FROM b_bewertungen INNER JOIN mo_modelle ON b_mo_id = mo_id" DeleteCommand="DELETE FROM b_bewertungen WHERE b_id = ?" InsertCommand="INSERT INTO b_bewertungen (b_id, b_mo_id, b_user, b_text, b_punkte) VALUES (?, ?, ?, ?, ?)" UpdateCommand="UPDATE b_bewertungen SET b_mo_id = ?, b_user = ?, b_text = ?, b_punkte = ? WHERE b_id = ?">
                 <DeleteParameters>
                     <asp:Parameter Name="b_id" Type="Int32" />
                 </DeleteParameters>
@@ -36,8 +36,8 @@
                 <div class="col-md-10">
                     <asp:DropDownList ID="Automarke" AutoPostBack="true" runat="server" DataSourceID="SqlDataSource3" DataTextField="m_bezeichnung" DataValueField="m_id"></asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:supercarrent %>" ProviderName="<%$ ConnectionStrings:supercarrent.ProviderName %>" SelectCommand="SELECT m_id, m_bezeichnung FROM m_marken ORDER BY m_bezeichnung"></asp:SqlDataSource>
-                    <asp:DropDownList ID="Modell" runat="server" DataSourceID="SqlDataSource2" DataTextField="mo_bezeichnung" DataValueField="mo_bezeichnung"></asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:supercarrent %>" ProviderName="<%$ ConnectionStrings:supercarrent.ProviderName %>" SelectCommand="SELECT mo_bezeichnung FROM mo_modelle INNER JOIN m_marken ON mo_m_id = m_id WHERE (mo_m_id = @id) ORDER BY mo_bezeichnung">
+                    <asp:DropDownList ID="Modell" runat="server" DataSourceID="SqlDataSource2" DataTextField="mo_bezeichnung" DataValueField="mo_id"></asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:supercarrent %>" ProviderName="<%$ ConnectionStrings:supercarrent.ProviderName %>" SelectCommand="SELECT * FROM mo_modelle INNER JOIN m_marken ON mo_m_id = m_id WHERE (mo_m_id = @id) ORDER BY mo_bezeichnung">
                         <SelectParameters>
                             <asp:ControlParameter ControlID="Automarke" Name="id" PropertyName="SelectedValue" />
                         </SelectParameters>
@@ -50,6 +50,8 @@
                         <asp:ListItem>4</asp:ListItem>
                         <asp:ListItem>5</asp:ListItem>
                     </asp:RadioButtonList>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="RadioButtonList1"
+                                CssClass="text-danger" ErrorMessage="Bitte geben sie eine Punktezahl!" />
                     <asp:Button ID="Button1" runat="server" Text="Bewertung abschicken" CssClass="button button1" OnClick="Button1_Click"/>
                 </div>
             </div>

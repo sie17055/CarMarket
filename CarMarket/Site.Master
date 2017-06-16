@@ -78,7 +78,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; SuperCarRent - <%: DateTime.Now.Year %></p>
+                <p>&copy; SuperCarRent - <%: DateTime.Now.Year %> - Alexander Siess</p>
             </footer>
         </div>
     </form>

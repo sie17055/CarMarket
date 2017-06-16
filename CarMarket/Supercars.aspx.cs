@@ -23,4 +23,4 @@ namespace CarMarket
             DetailsView1.SetPageIndex(datagrid.SelectedIndex * (datagrid.PageIndex + 1));
         }
     }
-}
+} 
